@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>告别过程式代码：开启你的Java面向对象之旅 - RANDOMBLOG</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="第三篇：核心的飞跃——类与对象 (Classes &amp;amp; Objects)欢迎来到我们系列教程的第三篇！如果你已经掌握了Java的基础语法和流程控制，那么恭喜你，你已经具备了让计算机“做事”的能,"> 
+    <meta name="author" content="Random"> 
+    <link rel="alternative" href="atom.xml" title="RANDOMBLOG" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">RANDOMBLOG</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">告别过程式代码：开启你的Java面向对象之旅</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/Java"><b>「
+                    </b>JAVA<b> 」</b></a>
+                
+                八月 31, 2025
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2025/08/31/%E5%91%8A%E5%88%AB%E8%BF%87%E7%A8%8B%E5%BC%8F%E4%BB%A3%E7%A0%81%EF%BC%9A%E5%BC%80%E5%90%AF%E4%BD%A0%E7%9A%84Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%8B%E6%97%85/" title="告别过程式代码：开启你的Java面向对象之旅" class="">告别过程式代码：开启你的Java面向对象之旅</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                    32k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                    29 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s">从过程式思维转向面向对象，掌握 Java 编程的核心思想与实战技巧。</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h3 id="第三篇：核心的飞跃——类与对象-Classes-Objects"><a href="#第三篇：核心的飞跃——类与对象-Classes-Objects" class="headerlink" title="第三篇：核心的飞跃——类与对象 (Classes &amp; Objects)"></a><strong>第三篇：核心的飞跃——类与对象 (Classes &amp; Objects)</strong></h3><p>欢迎来到我们系列教程的第三篇！如果你已经掌握了Java的基础语法和流程控制，那么恭喜你，你已经具备了让计算机“做事”的能力。但从现在开始，我们将进行一次思维上的巨大飞跃：从思考“怎么做”，转向思考“让谁来做”。这，就是面向对象编程（Object-Oriented Programming, OOP）的精髓。</p>
+<h4 id="1-面向对象编程入门"><a href="#1-面向对象编程入门" class="headerlink" title="1. 面向对象编程入门"></a><strong>1. 面向对象编程入门</strong></h4><p>在过程式编程中，我们的代码就像一份详细的菜谱，严格按照步骤一步步执行。但在面向对象的世界里，我们不再是厨师，而是变成了餐厅老板。我们会定义不同角色的“员工”（对象），比如厨师、服务员、收银员，并让他们各司其职，协同工作。</p>
+<h5 id="类-Class-与-对象-Object-：从蓝图到实例"><a href="#类-Class-与-对象-Object-：从蓝图到实例" class="headerlink" title="类 (Class) 与 对象 (Object)：从蓝图到实例"></a><strong>类 (Class) 与 对象 (Object)：从蓝图到实例</strong></h5><p>要理解面向对象，首先必须弄清“类”和“对象”这两个核心概念。</p>
+<ul>
+<li><p><strong>类 (Class)</strong>：可以理解为一张 <strong>“蓝图”</strong> 或一个 <strong>“模板”</strong>。它定义了一类事物共同拥有的 <strong>属性（特征）</strong> 和 <strong>行为（能做什么）</strong>。例如，我们可以设计一张“汽车”的蓝图，规定所有汽车都应该有品牌、颜色这些属性，也应该能启动、加速这些行为。类本身是抽象的，不占用内存。</p>
+</li>
+<li><p><strong>对象 (Object)</strong>：是根据“类”这张蓝图创造出来的 <strong>“实体”</strong> 或 <strong>“实例” (Instance)</strong>。每一辆具体的、看得到摸得着的汽车（比如“我那辆红色的法拉利”、“邻居那辆黑色的雅阁”）都是一个对象。对象是具体的，它在内存中真实存在，并拥有自己独特的属性值（我的车是红色，邻居的车是黑色）。</p>
+</li>
+</ul>
+<p><strong>简单总结：类是对象的模板，对象是类的实例。</strong></p>
+<h5 id="如何设计一个简单的实体类"><a href="#如何设计一个简单的实体类" class="headerlink" title="如何设计一个简单的实体类"></a><strong>如何设计一个简单的实体类</strong></h5><p>让我们动手实践，在Java中设计一个 <code>Car</code> (汽车) 类。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个名为 Car 的类（汽车蓝图）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">    <span class="comment">// 属性 (Fields / Attributes)，也叫成员变量</span></span><br><span class="line">    <span class="comment">// 用来描述对象的状态</span></span><br><span class="line">    String brand; <span class="comment">// 品牌</span></span><br><span class="line">    String color; <span class="comment">// 颜色</span></span><br><span class="line">    <span class="type">int</span> speed;    <span class="comment">// 当前速度</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 行为 (Methods)，也叫成员方法</span></span><br><span class="line">    <span class="comment">// 用来描述对象的动作</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">startEngine</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;引擎启动！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">accelerate</span><span class="params">(<span class="type">int</span> amount)</span> &#123;</span><br><span class="line">        speed = speed + amount;</span><br><span class="line">        System.out.println(<span class="string">&quot;加速 &quot;</span> + amount + <span class="string">&quot; km/h，当前车速：&quot;</span> + speed + <span class="string">&quot; km/h&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">displayInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;这是一辆 &quot;</span> + color + <span class="string">&quot; 的 &quot;</span> + brand + <span class="string">&quot;，当前车速为 &quot;</span> + speed + <span class="string">&quot; km/h。&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在，我们有了蓝图。接下来，我们要在另一个文件中（比如 <code>main</code> 方法所在的类）根据这张蓝图创建出具体的汽车对象。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Garage</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用 new 关键字，根据 Car 类创建了一个 Car 对象</span></span><br><span class="line">        <span class="comment">// myCar 是一个引用，指向了内存中新创建的汽车对象</span></span><br><span class="line">        <span class="type">Car</span> <span class="variable">myCar</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Car</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用 &quot;对象名.属性&quot; 的方式给对象的属性赋值</span></span><br><span class="line">        myCar.brand = <span class="string">&quot;特斯拉&quot;</span>;</span><br><span class="line">        myCar.color = <span class="string">&quot;白色&quot;</span>;</span><br><span class="line">        myCar.speed = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用 &quot;对象名.方法()&quot; 的方式调用对象的行为</span></span><br><span class="line">        myCar.displayInfo(); <span class="comment">// 输出：这是一辆 白色的 特斯拉，当前车速为 0 km/h。</span></span><br><span class="line">        myCar.startEngine();   <span class="comment">// 输出：引擎启动！</span></span><br><span class="line">        myCar.accelerate(<span class="number">80</span>); <span class="comment">// 输出：加速 80 km/h，当前车速：80 km/h</span></span><br><span class="line">        myCar.displayInfo(); <span class="comment">// 输出：这是一辆 白色的 特斯拉，当前车速为 80 km/h。</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;--------------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 我们可以创建多个不同的对象</span></span><br><span class="line">        <span class="type">Car</span> <span class="variable">anotherCar</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Car</span>();</span><br><span class="line">        anotherCar.brand = <span class="string">&quot;保时捷&quot;</span>;</span><br><span class="line">        anotherCar.color = <span class="string">&quot;黄色&quot;</span>;</span><br><span class="line">        anotherCar.accelerate(<span class="number">120</span>);</span><br><span class="line">        anotherCar.displayInfo(); <span class="comment">// 输出：这是一辆 黄色的 保时捷，当前车速为 120 km/h。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-对象的创建与初始化"><a href="#2-对象的创建与初始化" class="headerlink" title="2. 对象的创建与初始化"></a><strong>2. 对象的创建与初始化</strong></h4><p>在上面的例子中，我们使用 <code>new Car()</code> 来创建对象。这个过程背后，其实是 <strong>构造器 (Constructor)</strong> 在工作。</p>
+<h5 id="构造器-Constructor-：对象的“出生证明”"><a href="#构造器-Constructor-：对象的“出生证明”" class="headerlink" title="构造器 (Constructor)：对象的“出生证明”"></a><strong>构造器 (Constructor)：对象的“出生证明”</strong></h5><p>构造器是一个特殊的方法，它的作用就是在对象被创建时进行 <strong>初始化</strong> 工作（比如给属性赋初始值）。它就像是对象的“出生仪式”，在对象诞生的一刻被自动调用，且只调用一次。</p>
+<p>构造器有以下特点：</p>
+<ol>
+<li>方法名必须与类名完全相同。</li>
+<li>没有返回值类型，连 <code>void</code> 都不写。</li>
+</ol>
+<p>如果我们不写任何构造器，Java会贴心地为我们提供一个看不见的、无参数的默认构造器。但我们通常会自定义构造器，来满足更灵活的初始化需求。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">    String brand;</span><br><span class="line">    String color;</span><br><span class="line">    <span class="type">int</span> speed;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这是一个无参数的构造器</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Car</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;一个Car对象被创建了（通过无参构造器）！&quot;</span>);</span><br><span class="line">        speed = <span class="number">0</span>; <span class="comment">// 可以在这里设置默认值</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这是一个带参数的构造器</span></span><br><span class="line">    <span class="comment">// 可以在创建对象时，直接传入品牌和颜色</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Car</span><span class="params">(String b, String c)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;一个Car对象被创建了（通过带参构造器）！&quot;</span>);</span><br><span class="line">        brand = b;</span><br><span class="line">        color = c;</span><br><span class="line">        speed = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ... 其他方法省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有了带参数的构造器，我们的创建过程可以大大简化：</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Garage</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 调用带参数的构造器，一步到位完成创建和初始化</span></span><br><span class="line">        <span class="type">Car</span> <span class="variable">myCar</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Car</span>(<span class="string">&quot;特斯拉&quot;</span>, <span class="string">&quot;白色&quot;</span>);</span><br><span class="line">        myCar.displayInfo(); <span class="comment">// 输出：这是一辆 白色的 特斯拉，当前车速为 0 km/h。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个类可以有多个构造器，只要它们的参数列表不同（类型、数量或顺序不同），这就叫 <strong>构造器重载 (Overloading)</strong>。</p>
+<h5 id="this-关键字：明确指出“我”是谁"><a href="#this-关键字：明确指出“我”是谁" class="headerlink" title="this 关键字：明确指出“我”是谁"></a><strong><code>this</code> 关键字：明确指出“我”是谁</strong></h5><p>当构造器或方法的参数名与类的成员变量名相同时，程序会如何区分呢？这时就需要 <code>this</code> 关键字。<code>this</code> 代表 <strong>“当前对象”</strong> 的引用。</p>
+<p><code>this</code> 的一个核心用途就是区分同名的成员变量和局部变量。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">    String brand;</span><br><span class="line">    String color;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Car</span><span class="params">(String brand, String color)</span> &#123;</span><br><span class="line">        <span class="comment">// this.brand 指的是当前对象的 brand 属性</span></span><br><span class="line">        <span class="comment">// 等号右边的 brand 指的是传入的参数</span></span><br><span class="line">        <span class="built_in">this</span>.brand = brand;</span><br><span class="line">        <span class="built_in">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种写法是Java开发中的标准规范，非常常用。</p>
+<h4 id="3-封装：面向对象的第一大特性"><a href="#3-封装：面向对象的第一大特性" class="headerlink" title="3. 封装：面向对象的第一大特性"></a><strong>3. 封装：面向对象的第一大特性</strong></h4><p>想象一下，汽车的内部结构非常复杂，如果把所有线路和零件都暴露给驾驶员，驾驶员可能会不小心弄坏它。所以汽车厂商会用一个外壳把内部结构“包”起来，只提供方向盘、油门、刹车等有限的接口给驾驶员。</p>
+<p>这个“包装”的思想，在OOP中就叫 <strong>封装 (Encapsulation)</strong>。</p>
+<p>封装的好处：</p>
+<ul>
+<li><strong>安全性</strong>：保护数据，防止被随意修改。</li>
+<li><strong>易用性</strong>：隐藏复杂细节，只暴露简单的操作接口。</li>
+</ul>
+<p>在Java中，我们主要使用 <strong>访问修饰符</strong> 来实现封装，最常用的就是 <code>private</code>。</p>
+<ul>
+<li><code>private</code> (私有的)：被 <code>private</code> 修饰的成员（属性或方法），只能在本类内部被访问。</li>
+</ul>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="comment">// 使用 private 将属性封装起来</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对外提供一个 public 的设值方法 (setter)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (age &gt; <span class="number">0</span> &amp;&amp; age &lt; <span class="number">150</span>) &#123;</span><br><span class="line">            <span class="comment">// 在这里可以加入数据合法性校验</span></span><br><span class="line">            <span class="built_in">this</span>.age = age;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;年龄不合法！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对外提供一个 public 的取值方法 (getter)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// name 的 getter/setter</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在，外部无法直接操作 <code>age</code> 属性，必须通过我们提供的 <code>setAge</code> 和 <code>getAge</code> 方法，这就保证了数据的安全性和可控性。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">School</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        <span class="comment">// stu.age = -30; // 编译错误！age是私有的，无法直接访问</span></span><br><span class="line">        </span><br><span class="line">        stu.setName(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        stu.setAge(<span class="number">20</span>); <span class="comment">// 必须通过公共方法来设置</span></span><br><span class="line">        stu.setAge(-<span class="number">30</span>); <span class="comment">// 输出：年龄不合法！</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;姓名：&quot;</span> + stu.getName() + <span class="string">&quot;，年龄：&quot;</span> + stu.getAge());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-static-关键字：属于“类”的成员"><a href="#4-static-关键字：属于“类”的成员" class="headerlink" title="4. static 关键字：属于“类”的成员"></a><strong>4. <code>static</code> 关键字：属于“类”的成员</strong></h4><p>通常情况下，类的属性和方法是属于 <strong>对象</strong> 的，每个对象都有一份自己的副本（比如每个Car对象都有自己的<code>color</code>）。但有时，我们希望某个属性或方法是 <strong>所有对象共享的</strong>，或者说，它不依赖于任何具体对象，而是直接属于 <strong>类</strong> 本身。这时，就要用到 <code>static</code> 关键字。</p>
+<p>被 <code>static</code> 修饰的成员，我们称之为 <strong>静态成员</strong> 或 <strong>类成员</strong>。</p>
+<h5 id="静态变量-Static-Variables"><a href="#静态变量-Static-Variables" class="headerlink" title="静态变量 (Static Variables)"></a><strong>静态变量 (Static Variables)</strong></h5><p>所有该类的对象共享同一个静态变量。任何一个对象修改了它的值，其他对象看到的值也会跟着改变。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">// 使用 static 修饰，表示班级名称是所有学生对象共享的</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">String</span> <span class="variable">className</span> <span class="operator">=</span> <span class="string">&quot;三年二班&quot;</span>; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 非静态方法可以访问静态成员</span></span><br><span class="line">        System.out.println(<span class="string">&quot;学生：&quot;</span> + <span class="built_in">this</span>.name + <span class="string">&quot;，班级：&quot;</span> + className);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">School</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;小明&quot;</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;小红&quot;</span>);</span><br><span class="line"></span><br><span class="line">        s1.printInfo(); <span class="comment">// 学生：小明，班级：三年二班</span></span><br><span class="line">        s2.printInfo(); <span class="comment">// 学生：小红，班级：三年二班</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 可以通过类名直接访问静态成员，这是推荐的用法</span></span><br><span class="line">        Student.className = <span class="string">&quot;火箭班&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        s1.printInfo(); <span class="comment">// 学生：小明，班级：火箭班</span></span><br><span class="line">        s2.printInfo(); <span class="comment">// 学生：小红，班级：火箭班</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="静态方法-Static-Methods"><a href="#静态方法-Static-Methods" class="headerlink" title="静态方法 (Static Methods)"></a><strong>静态方法 (Static Methods)</strong></h5><p>静态方法同样不依赖于任何对象，可以直接通过 <strong>类名调用</strong>。它通常用于实现一些工具类的功能。我们最熟悉的 <code>main</code> 方法就是一个静态方法。</p>
+<p><strong>注意：</strong> 静态方法内部不能使用 <code>this</code> 关键字，也不能直接访问非静态成员，因为它不与任何具体对象绑定。</p>
+<p>一个经典的静态方法应用场景就是 <strong>工具类 (Utility Class)</strong>。</p>
+<figure class="highlight java"><figcaption><span>name</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// 一个数学工具类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MathUtil</span> &#123;</span><br><span class="line">    <span class="comment">// 构造器私有化，防止外部创建该类的对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">MathUtil</span><span class="params">()</span> &#123;&#125; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算两个整数的和</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 找出一个数组中的最大值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">findMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> arr[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] &gt; max) &#123;</span><br><span class="line">                max = arr[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用工具类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestUtil</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> MathUtil.add(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;和是：&quot;</span> + sum); <span class="comment">// 和是：30</span></span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] numbers = &#123;<span class="number">5</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">7</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxVal</span> <span class="operator">=</span> MathUtil.findMax(numbers);</span><br><span class="line">        System.out.println(<span class="string">&quot;最大值是：&quot;</span> + maxVal); <span class="comment">// 最大值是：9</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>MathUtil</code> 这样的工具类，它的所有方法都是静态的，我们根本不需要创建它的对象，直接用类名调用即可，非常方便。</p>
+<hr>
+<p><strong>本章小结：</strong></p>
+<p>到这里，我们已经完成了从过程式到面向对象最关键的思维转变。我们学会了如何用 <code>class</code> 设计蓝图，用 <code>new</code> 创建对象，并通过封装、构造器、<code>this</code> 和 <code>static</code> 等核心知识点，让我们的代码变得更加结构化、安全和易于管理。</p>
+<p>掌握好类与对象，就等于拿到了进入面向对象世界的钥匙。在下一篇中，我们将继续探索OOP的另外两大支柱：继承与多态，去构建更加庞大和灵活的程序体系！</p>
+<h3 id="大纲及完成进度"><a href="#大纲及完成进度" class="headerlink" title="大纲及完成进度"></a>大纲及完成进度</h3><ul>
+<li><p><input disabled="" type="checkbox"> 
+<strong>第一篇：思想的转变与工具的准备</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>引言：为什么需要“告别”过程式代码？</strong><ul>
+<li><input disabled="" type="checkbox"> 对比C语言等过程式编程与Java面向对象的思维差异。</li>
+<li><input disabled="" type="checkbox"> 引入“万物皆对象”的核心思想。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>1. 环境搭建与第一行代码</strong><ul>
+<li><input disabled="" type="checkbox"> JDK的下载、安装与环境变量配置。</li>
+<li><input disabled="" type="checkbox"> 使用集成开发环境（IDE）编写并运行第一个 “Hello, World!” 程序。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>2. Java的基础语法单元</strong><ul>
+<li><input disabled="" type="checkbox"> <strong>注释、关键字、标识符</strong>：代码的规范与规则。</li>
+<li><input disabled="" type="checkbox"> <strong>变量与字面量</strong>：程序数据的基本容器。</li>
+<li><input disabled="" type="checkbox"> <strong>数据类型</strong>：定义数据的种类（<code>int</code>, <code>double</code>, <code>char</code> 等）。</li>
+<li><input disabled="" type="checkbox"> <strong>类型转换</strong>：自动类型提升与强制类型转换。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<strong>第二篇：搭建程序的骨架——流程控制与方法</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>1. 方法：代码的组织者</strong><ul>
+<li><input disabled="" type="checkbox"> 深入讲解方法的定义、调用、参数与返回值。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>2. 运算符：数据的加工厂</strong><ul>
+<li><input disabled="" type="checkbox"> 算术、赋值、关系、逻辑、三元运算符。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>3. 程序流程控制</strong><ul>
+<li><input disabled="" type="checkbox"> <strong>分支结构</strong>：<code>if-else</code> 与 <code>switch</code> 的使用场景和区别。</li>
+<li><input disabled="" type="checkbox"> <strong>循环结构</strong>：<code>for</code>, <code>while</code>, <code>do-while</code> 的应用。</li>
+<li><input disabled="" type="checkbox"> <strong>跳转控制</strong>：<code>break</code> 与 <code>continue</code>。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>4. 实战演练：从简单工具开始</strong><ul>
+<li><input disabled="" type="checkbox"> 综合运用本章知识，编写一个猜数字小游戏或一个简易计算器。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+<strong>第三篇：核心的飞跃——类与对象</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>1. 面向对象编程入门</strong><ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>类 (Class) 与 对象 (Object)</strong>：从蓝图到实例，讲解二者关系。</li>
+<li><input checked="" disabled="" type="checkbox"> 如何设计一个简单的实体类（如<code>Student</code>, <code>Car</code>）。</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>2. 对象的创建与初始化</strong><ul>
+<li><input checked="" disabled="" type="checkbox"> <strong>构造器 (Constructor)</strong>：对象的“出生证明”，学习重载。</li>
+<li><input checked="" disabled="" type="checkbox"> <strong><code>this</code> 关键字</strong>：明确指出对象自身的引用。</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>3. 封装：面向对象的第一大特性</strong><ul>
+<li><input checked="" disabled="" type="checkbox"> 使用 <code>private</code> 关键字保护内部数据。</li>
+<li><input checked="" disabled="" type="checkbox"> 提供 <code>public</code> 的 <code>getter/setter</code> 方法作为唯一的访问出口。</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> <strong>4. <code>static</code> 关键字：属于“类”的成员</strong><ul>
+<li><input checked="" disabled="" type="checkbox"> 静态变量与静态方法的应用场景（如工具类 <code>MathUtil</code>）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<strong>第四篇：构建复杂的体系——继承与多态</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>1. 继承：代码复用的利器</strong><ul>
+<li><input disabled="" type="checkbox"> <code>extends</code> 关键字，<code>super</code> 的使用。</li>
+<li><input disabled="" type="checkbox"> 子类对父类成员的继承规则，权限修饰符的影响。</li>
+<li><input disabled="" type="checkbox"> <strong>方法重写 (Override)</strong>：子类实现自己独特的行为。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>2. 多态：面向对象的精髓</strong><ul>
+<li><input disabled="" type="checkbox"> 什么是多态？（父类引用指向子类对象）。</li>
+<li><input disabled="" type="checkbox"> 多态的好处与应用场景。</li>
+<li><input disabled="" type="checkbox"> 强制类型转换与 <code>instanceof</code> 关键字。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>3. <code>final</code>、抽象类与接口</strong><ul>
+<li><input disabled="" type="checkbox"> <strong><code>final</code></strong>：不可改变的常量、类和方法。</li>
+<li><input disabled="" type="checkbox"> <strong><code>abstract</code></strong>：定义“规范”而不实现，用于模板方法设计模式。</li>
+<li><input disabled="" type="checkbox"> <strong><code>interface</code></strong>：比抽象类更纯粹的“契约”，定义能力。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>4. 实战演练：智能家居系统</strong><ul>
+<li><input disabled="" type="checkbox"> 设计一个 <code>Device</code> 接口，由 <code>Light</code>、<code>TV</code> 等具体类实现，通过一个控制器（<code>Controller</code>）来统一管理，充分体验多态的魅力。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<strong>第五篇：深入探索——常用API与高级特性</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>1. 常用API介绍</strong><ul>
+<li><input disabled="" type="checkbox"> <code>String</code> 类的常用方法。</li>
+<li><input disabled="" type="checkbox"> <code>ArrayList</code> 集合的入门使用。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>2. 内部类与Lambda表达式</strong><ul>
+<li><input disabled="" type="checkbox"> 匿名内部类的应用场景。</li>
+<li><input disabled="" type="checkbox"> 从匿名内部类过渡到 <strong>Lambda 表达式</strong>，体验函数式编程的简洁之美。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>3. 异常处理</strong><ul>
+<li><input disabled="" type="checkbox"> <code>try-catch-finally</code> 的使用。</li>
+<li><input disabled="" type="checkbox"> 如何抛出和自定义异常。</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>4. 集合框架</strong><ul>
+<li><input disabled="" type="checkbox"> <code>Collection</code>, <code>List</code>, <code>Set</code>, <code>Map</code> 的体系与区别。</li>
+<li><input disabled="" type="checkbox"> <code>Stream</code> 流的入门使用，实现优雅的数据处理。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >留言</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://s2.ax1x.com/2019/09/19/nLtSiD.png" height=300 width=300></img>
+                    <p>Random</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">6 <p>文章</p></a></li>
+                    <li><a href="/categories">3 <p>分类</p></a></li>
+                    <li><a href="/tags">1 <p>标签</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87%EF%BC%9A%E6%A0%B8%E5%BF%83%E7%9A%84%E9%A3%9E%E8%B7%83%E2%80%94%E2%80%94%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1-Classes-Objects"><span class="toc-number">1.</span> <span class="toc-text">第三篇：核心的飞跃——类与对象 (Classes &amp; Objects)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%BA%B2%E5%8F%8A%E5%AE%8C%E6%88%90%E8%BF%9B%E5%BA%A6"><span class="toc-number">2.</span> <span class="toc-text">大纲及完成进度</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2025
+        <span class="gradient-text">
+            Random
+        </span>.
+        by <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank" rel="noopener">StackOverflow</a>
+        . Go to
+        <span class="gradient-text">
+            <a href="https://github.com/coder-random" title="Github" target="_blank" rel="noopener">Github</a>
+        </span>
+
+        
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/c/c.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
