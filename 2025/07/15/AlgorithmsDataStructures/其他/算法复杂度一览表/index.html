@@ -1,0 +1,1132 @@
+
+<!DOCTYPE html>
+<html lang="zh_CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>算法复杂度一览表 - RANDOMBLOG</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="时间空间复杂度常见情况🧊时间
+
+
+名称
+记号
+说明
+典型例子
+
+
+
+常数阶
+O(1)
+不随输入规模变化
+访问数组某个元素
+
+
+对数阶
+O(log n)
+输入每次减半
+二分查找、平衡二叉搜索树操作
+,"> 
+    <meta name="author" content="Random"> 
+    <link rel="alternative" href="atom.xml" title="RANDOMBLOG" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">RANDOMBLOG</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">算法复杂度一览表</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/算法与数据结构"><b>「
+                    </b>算法与数据结构<b> 」</b></a>
+                
+                七月 15, 2025
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2025/07/15/AlgorithmsDataStructures/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%80%E8%A7%88%E8%A1%A8/" title="算法复杂度一览表" class="">算法复杂度一览表</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    10k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    9 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s">彻底掌握常见算法复杂度，从时间与空间的维度评估代码性能。</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="时间空间复杂度常见情况"><a href="#时间空间复杂度常见情况" class="headerlink" title="时间空间复杂度常见情况"></a>时间空间复杂度常见情况</h1><h2 id="🧊时间"><a href="#🧊时间" class="headerlink" title="🧊时间"></a>🧊时间</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>记号</th>
+<th>说明</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>常数阶</td>
+<td>O(1)</td>
+<td>不随输入规模变化</td>
+<td>访问数组某个元素</td>
+</tr>
+<tr>
+<td>对数阶</td>
+<td>O(log n)</td>
+<td>输入每次减半</td>
+<td>二分查找、平衡二叉搜索树操作</td>
+</tr>
+<tr>
+<td>线性阶</td>
+<td>O(n)</td>
+<td>遍历整个输入</td>
+<td>顺序查找、遍历数组</td>
+</tr>
+<tr>
+<td>线性对数阶</td>
+<td>O(n log n)</td>
+<td>分治递归 + 遍历</td>
+<td>快排、归并排序、堆排序</td>
+</tr>
+<tr>
+<td>平方阶</td>
+<td>O(n²)</td>
+<td>嵌套两层循环</td>
+<td>冒泡排序、选择排序、插入排序</td>
+</tr>
+<tr>
+<td>立方阶</td>
+<td>O(n³)</td>
+<td>三层嵌套循环</td>
+<td>Floyd 最短路径</td>
+</tr>
+<tr>
+<td>指数阶</td>
+<td>O(2ⁿ)</td>
+<td>枚举所有组合</td>
+<td>子集生成、背包问题暴力递归</td>
+</tr>
+<tr>
+<td>阶乘阶</td>
+<td>O(n!)</td>
+<td>全排列枚举</td>
+<td>旅行商问题暴力解、n皇后问题</td>
+</tr>
+</tbody></table>
+<h2 id="🧊-空间"><a href="#🧊-空间" class="headerlink" title="🧊 空间"></a>🧊 空间</h2><table>
+<thead>
+<tr>
+<th>空间复杂度</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>O(1)</td>
+<td>原地排序、双指针、滑动窗口</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>需要额外数组、哈希表、栈、队列</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>二维矩阵（如图算法、DP表）</td>
+</tr>
+</tbody></table>
+<h2 id="💡-小技巧：估算能不能过"><a href="#💡-小技巧：估算能不能过" class="headerlink" title="💡 小技巧：估算能不能过"></a>💡 小技巧：估算能不能过</h2><table>
+<thead>
+<tr>
+<th>输入规模 n</th>
+<th>推荐算法复杂度上限</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n ≤ 10</td>
+<td>O(n!) 可接受</td>
+</tr>
+<tr>
+<td>n ≤ 20</td>
+<td>O(2ⁿ) 可接受</td>
+</tr>
+<tr>
+<td>n ≤ 1e2</td>
+<td>O(n³) 可接受</td>
+</tr>
+<tr>
+<td>n ≤ 1e4</td>
+<td>O(n²) 可接受</td>
+</tr>
+<tr>
+<td>n ≤ 1e5</td>
+<td>O(n log n) 必须</td>
+</tr>
+<tr>
+<td>n ≤ 1e6</td>
+<td>O(n) 最佳</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="算法与数据结构复杂度一览表"><a href="#算法与数据结构复杂度一览表" class="headerlink" title="算法与数据结构复杂度一览表"></a>算法与数据结构复杂度一览表</h1><p>本表系统整理了算法复杂度的核心概念及常见算法&#x2F;数据结构在时间和空间复杂度上的表现，便于查阅和对比。</p>
+<hr>
+<h2 id="一、什么是算法复杂度？"><a href="#一、什么是算法复杂度？" class="headerlink" title="一、什么是算法复杂度？"></a>一、什么是算法复杂度？</h2><p>算法复杂度是衡量算法性能的重要指标，主要包括<strong>时间复杂度</strong>（执行所需时间）和<strong>空间复杂度</strong>（所需内存），常用**大O表示法（Big O Notation）**描述在最坏情况下的上界。</p>
+<hr>
+<h2 id="二、常见时间复杂度和空间复杂度"><a href="#二、常见时间复杂度和空间复杂度" class="headerlink" title="二、常见时间复杂度和空间复杂度"></a>二、常见时间复杂度和空间复杂度</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>名称</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>O(1)</td>
+<td>常数</td>
+<td>数组访问、哈希查找</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>对数</td>
+<td>二分查找</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>线性</td>
+<td>遍历数组</td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>线性对数</td>
+<td>归并排序、快速排序</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>平方</td>
+<td>冒泡排序、插入排序</td>
+</tr>
+<tr>
+<td>O(2ⁿ)</td>
+<td>指数</td>
+<td>递归斐波那契、子集生成</td>
+</tr>
+<tr>
+<td>O(n!)</td>
+<td>阶乘</td>
+<td>全排列问题</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="三、排序算法复杂度"><a href="#三、排序算法复杂度" class="headerlink" title="三、排序算法复杂度"></a>三、排序算法复杂度</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冒泡排序</td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>插入排序</td>
+<td>O(n)</td>
+<td>O(n²)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n²)</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>计数排序</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+<td>O(n + k)</td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td>O(n)</td>
+<td>O(n + k)</td>
+<td>O(n²)</td>
+<td>O(n + k)</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>O(n log n)</td>
+<td>O(n log² n)</td>
+<td>O(n²)</td>
+<td>O(1)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="四、查找算法复杂度"><a href="#四、查找算法复杂度" class="headerlink" title="四、查找算法复杂度"></a>四、查找算法复杂度</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>线性查找</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>二分查找</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>跳跃查找</td>
+<td>O(1)</td>
+<td>O(√n)</td>
+<td>O(√n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>插值查找</td>
+<td>O(1)</td>
+<td>O(log log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>哈希查找</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="五、线性数据结构复杂度"><a href="#五、线性数据结构复杂度" class="headerlink" title="五、线性数据结构复杂度"></a>五、线性数据结构复杂度</h2><table>
+<thead>
+<tr>
+<th>结构&#x2F;操作</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数组-访问</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>数组-插入&#x2F;删除</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>链表-访问</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>链表-插入&#x2F;删除</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>栈&#x2F;队列-操作</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="六、树形数据结构复杂度"><a href="#六、树形数据结构复杂度" class="headerlink" title="六、树形数据结构复杂度"></a>六、树形数据结构复杂度</h2><table>
+<thead>
+<tr>
+<th>结构&#x2F;操作</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二叉搜索树-查找</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>AVL树&#x2F;红黑树</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>堆-操作</td>
+<td>O(1)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Trie树-操作</td>
+<td>O(m)</td>
+<td>O(m)</td>
+<td>O(m)</td>
+<td>O(nm)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="七、图形数据结构复杂度"><a href="#七、图形数据结构复杂度" class="headerlink" title="七、图形数据结构复杂度"></a>七、图形数据结构复杂度</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>邻接矩阵 - 访问&#x2F;搜索&#x2F;插入&#x2F;删除</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(V²)</td>
+</tr>
+<tr>
+<td>邻接矩阵 - 遍历</td>
+<td>O(V²)</td>
+<td>O(V²)</td>
+<td>O(V²)</td>
+<td>O(V²)</td>
+</tr>
+<tr>
+<td>邻接表 - 访问</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(V)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>邻接表 - 搜索</td>
+<td>O(1)</td>
+<td>O(V)</td>
+<td>O(V)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>邻接表 - 插入</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>邻接表 - 删除</td>
+<td>O(1)</td>
+<td>O(E)</td>
+<td>O(E)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>邻接表 - 遍历</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>边列表 - 访问&#x2F;搜索</td>
+<td>O(1)</td>
+<td>O(E)</td>
+<td>O(E)</td>
+<td>O(E)</td>
+</tr>
+<tr>
+<td>边列表 - 插入&#x2F;删除</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(E)</td>
+</tr>
+<tr>
+<td>边列表 - 遍历</td>
+<td>O(E)</td>
+<td>O(E)</td>
+<td>O(E)</td>
+<td>O(E)</td>
+</tr>
+<tr>
+<td>有向&#x2F;无向&#x2F;加权图-基本操作</td>
+<td>O(1)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>有向无环图(DAG)-基本操作</td>
+<td>O(1)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注：V为顶点数，E为边数。</p>
+</blockquote>
+<hr>
+<h2 id="八、哈希与映射"><a href="#八、哈希与映射" class="headerlink" title="八、哈希与映射"></a>八、哈希与映射</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>哈希表-操作</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>布隆过滤器</td>
+<td>O(k)</td>
+<td>O(k)</td>
+<td>O(k)</td>
+<td>O(m)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="九、高级数据结构"><a href="#九、高级数据结构" class="headerlink" title="九、高级数据结构"></a>九、高级数据结构</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>并查集</td>
+<td>O(1)</td>
+<td>O(α(n))</td>
+<td>O(α(n))</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>跳表</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十、图论算法"><a href="#十、图论算法" class="headerlink" title="十、图论算法"></a>十、图论算法</h2><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BFS&#x2F;DFS</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Dijkstra</td>
+<td>O(V²+E)</td>
+<td>O(V²+E)</td>
+<td>O(V²+E)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Bellman-Ford</td>
+<td>O(VE)</td>
+<td>O(VE)</td>
+<td>O(VE)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>Floyd-Warshall</td>
+<td>O(V³)</td>
+<td>O(V³)</td>
+<td>O(V³)</td>
+<td>O(V²)</td>
+</tr>
+<tr>
+<td>Kruskal</td>
+<td>O(E log E)</td>
+<td>O(E log E)</td>
+<td>O(E log E)</td>
+<td>O(V+E)</td>
+</tr>
+<tr>
+<td>Prim</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(E log V)</td>
+<td>O(V)</td>
+</tr>
+<tr>
+<td>拓扑排序</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V+E)</td>
+<td>O(V)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十一、字符串和数论算法"><a href="#十一、字符串和数论算法" class="headerlink" title="十一、字符串和数论算法"></a>十一、字符串和数论算法</h2><h3 id="字符串算法"><a href="#字符串算法" class="headerlink" title="字符串算法"></a>字符串算法</h3><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>KMP算法</td>
+<td>O(n)</td>
+<td>O(m+n)</td>
+<td>O(m+n)</td>
+<td>O(m)</td>
+</tr>
+<tr>
+<td>Rabin-Karp算法</td>
+<td>O(n)</td>
+<td>O(m+n)</td>
+<td>O(mn)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Boyer-Moore算法</td>
+<td>O(n&#x2F;m)</td>
+<td>O(n)</td>
+<td>O(mn)</td>
+<td>O(m)</td>
+</tr>
+</tbody></table>
+<h3 id="数论算法"><a href="#数论算法" class="headerlink" title="数论算法"></a>数论算法</h3><table>
+<thead>
+<tr>
+<th>算法名称</th>
+<th>最佳</th>
+<th>平均</th>
+<th>最差</th>
+<th>空间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>欧几里得算法(GCD)</td>
+<td>O(1)</td>
+<td>O(log min(a,b))</td>
+<td>O(log min(a,b))</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>快速幂</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>埃拉托斯特尼筛法</td>
+<td>O(n log log n)</td>
+<td>O(n log log n)</td>
+<td>O(n log log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>模逆元计算</td>
+<td>O(n³)</td>
+<td>O(n³)</td>
+<td>O(n³)</td>
+<td>O(n²)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十二、复杂度分析与算法选择建议"><a href="#十二、复杂度分析与算法选择建议" class="headerlink" title="十二、复杂度分析与算法选择建议"></a>十二、复杂度分析与算法选择建议</h2><ul>
+<li>根据输入数据规模、时间效率要求、内存限制等选取算法；</li>
+<li>合理利用空间换时间、分治、动态规划等优化策略；</li>
+<li>选择适合场景的数据结构（如查找优先用哈希&#x2F;二分查找，稀疏图用邻接表等）。</li>
+</ul>
+<hr>
+<blockquote>
+<p>本表仅供速查，实际复杂度可能因具体实现、输入分布和硬件环境而有所不同。</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://s2.ax1x.com/2019/09/19/nLtSiD.png" height=300 width=300></img>
+                    <p>Random</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">8 <p>Articles</p></a></li>
+                    <li><a href="/categories">4 <p>Categories</p></a></li>
+                    <li><a href="/tags">2 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%B8%B8%E8%A7%81%E6%83%85%E5%86%B5"><span class="toc-number">1.</span> <span class="toc-text">时间空间复杂度常见情况</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A7%8A%E6%97%B6%E9%97%B4"><span class="toc-number">1.1.</span> <span class="toc-text">🧊时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A7%8A-%E7%A9%BA%E9%97%B4"><span class="toc-number">1.2.</span> <span class="toc-text">🧊 空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%92%A1-%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%9A%E4%BC%B0%E7%AE%97%E8%83%BD%E4%B8%8D%E8%83%BD%E8%BF%87"><span class="toc-number">1.3.</span> <span class="toc-text">💡 小技巧：估算能不能过</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%80%E8%A7%88%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">算法与数据结构复杂度一览表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">一、什么是算法复杂度？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E8%A7%81%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.2.</span> <span class="toc-text">二、常见时间复杂度和空间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.3.</span> <span class="toc-text">三、排序算法复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.4.</span> <span class="toc-text">四、查找算法复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.5.</span> <span class="toc-text">五、线性数据结构复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.6.</span> <span class="toc-text">六、树形数据结构复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%9B%BE%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">2.7.</span> <span class="toc-text">七、图形数据结构复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%93%88%E5%B8%8C%E4%B8%8E%E6%98%A0%E5%B0%84"><span class="toc-number">2.8.</span> <span class="toc-text">八、哈希与映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.9.</span> <span class="toc-text">九、高级数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95"><span class="toc-number">2.10.</span> <span class="toc-text">十、图论算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95"><span class="toc-number">2.11.</span> <span class="toc-text">十一、字符串和数论算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95"><span class="toc-number">2.11.1.</span> <span class="toc-text">字符串算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E8%AE%BA%E7%AE%97%E6%B3%95"><span class="toc-number">2.11.2.</span> <span class="toc-text">数论算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E4%B8%8E%E7%AE%97%E6%B3%95%E9%80%89%E6%8B%A9%E5%BB%BA%E8%AE%AE"><span class="toc-number">2.12.</span> <span class="toc-text">十二、复杂度分析与算法选择建议</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2025
+        <span class="gradient-text">
+            Random
+        </span>.
+        by <a href="https://stackoverflow.com/" title="StackOverflow" target="_blank" rel="noopener">StackOverflow</a>
+        . Go to
+        <span class="gradient-text">
+            <a href="https://github.com/coder-random" title="Github" target="_blank" rel="noopener">Github</a>
+        </span>
+
+        
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/c/c.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
