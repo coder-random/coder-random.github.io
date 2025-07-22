@@ -5,15 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>LeetCode-42接雨水 - RANDOMBLOG</title>
+    <title>LeetCode-2两数相加 - RANDOMBLOG</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
     <meta name="description" content="
-题目链接：LeetCode - 42. Trapping Rain Water
+题目链接： LeetCode 2. Add Two Numbers）
 
-解法一：相向双指针题目思路：双指针法 + 局部最值本题的目标是，给定一个整数数组 height，其中每个元素代表一,"> 
+题目描述给你两个 非空 的链表 l1 和 l2，它们表示两个 非负整数，每位数字都是逆序存储 的，每个节点只存储一位数字。
+,"> 
     <meta name="author" content="Random"> 
     <link rel="alternative" href="atom.xml" title="RANDOMBLOG" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -77,7 +78,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">LeetCode-42接雨水</h3>
+        <h3 class="subtitle">LeetCode-2两数相加</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -109,22 +110,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                七月 16, 2025
+                七月 20, 2025
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2025/07/16/LeetCode/LeetCode-42%E6%8E%A5%E9%9B%A8%E6%B0%B4/" title="LeetCode-42接雨水" class="">LeetCode-42接雨水</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2025/07/20/LeetCode/LeetCode-2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" title="LeetCode-2两数相加" class="">LeetCode-2两数相加</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    3.9k
+                    5.9k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    4 mins.
+                    5 mins.
                 </span>
                 
                 
@@ -159,25 +160,89 @@
     <div class='main'>
         <div class="content markdown animated fadeIn">
             <blockquote>
-<p>题目链接：<br><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trapping-rain-water/description/">LeetCode - 42. Trapping Rain Water</a></p>
+<p>题目链接：<br><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/description/"> LeetCode 2. Add Two Numbers）</a></p>
 </blockquote>
-<h2 id="解法一：相向双指针"><a href="#解法一：相向双指针" class="headerlink" title="解法一：相向双指针"></a>解法一：相向双指针</h2><h3 id="题目思路：双指针法-局部最值"><a href="#题目思路：双指针法-局部最值" class="headerlink" title="题目思路：双指针法 + 局部最值"></a>题目思路：双指针法 + 局部最值</h3><p>本题的目标是，给定一个整数数组 <code>height</code>，其中每个元素代表一个单位宽度的柱子的高度，求这些柱子可以接住多少单位的雨水。</p>
-<h3 id="算法核心思想："><a href="#算法核心思想：" class="headerlink" title="算法核心思想："></a>算法核心思想：</h3><p>我们使用 <strong>双指针法</strong> 从两边向中间遍历，同时记录当前左右的最大高度 <code>tL</code> 和 <code>rL</code>。每次比较左右最大值，谁小就移动谁的指针，这样可以确保当前指针所处位置可以接的雨水只依赖于较小的一边。</p>
-<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><ul>
-<li><code>l</code>, <code>r</code>: 左右指针，初始指向数组两端。</li>
-<li><code>tL</code>, <code>rL</code>: 当前指针左侧和右侧的最大高度。</li>
-<li><code>ans</code>: 最终答案，即累计接住的雨水量。</li>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你两个 <strong>非空</strong> 的链表 <code>l1</code> 和 <code>l2</code>，它们表示两个 <strong>非负整数</strong>，<strong>每位数字都是逆序存储</strong> 的，每个节点只存储一位数字。</p>
+<p>请你将这两个数相加，并以同样形式返回一个代表和的链表。</p>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,0,8]</span><br><span class="line">解释：342 + 465 = 807</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="解法一：模拟"><a href="#解法一：模拟" class="headerlink" title="解法一：模拟"></a>解法一：模拟</h2><p>由于两个数是以<strong>逆序</strong>存储的，所以我们可以从两个链表的头部开始逐位相加：</p>
+<ol>
+<li>模拟<strong>竖式加法</strong>：从低位开始相加（即从链表头开始），依次处理进位。</li>
+<li>每次处理一位，并创建一个新节点表示该位结果。</li>
+<li>若最后还有<strong>进位</strong>，则需要额外加一个新节点。</li>
+</ol>
+<hr>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li>定义两个指针：<code>head</code> 为结果链表头，<code>cur</code> 为当前操作指针；</li>
+<li>定义变量 <code>carry = 0</code> 表示进位；</li>
+<li>遍历 <code>l1</code> 和 <code>l2</code> 的每一位数字：<ul>
+<li>若某一链表已结束，则看作是 0；</li>
+<li>计算当前位 <code>sum = val1 + val2 + carry</code>；</li>
+<li>当前位值为 <code>sum % 10</code>，进位为 <code>sum / 10</code>；</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">int</span> <span class="title">trap</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">	    <span class="type">int</span> n = height.<span class="built_in">size</span>();        <span class="comment">// 柱子的总数</span></span><br><span class="line">	    <span class="type">int</span> l = <span class="number">0</span>, r = n - <span class="number">1</span>;         <span class="comment">// 左右指针</span></span><br><span class="line">	    <span class="type">int</span> tL = <span class="number">0</span>, rL = <span class="number">0</span>;           <span class="comment">// 左右的最高柱子</span></span><br><span class="line">	    <span class="type">int</span> ans = <span class="number">0</span>;                  <span class="comment">// 接住的雨水总量</span></span><br><span class="line">	    </span><br><span class="line">	    <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">	        <span class="comment">// 更新左右最大高度</span></span><br><span class="line">	        tL = <span class="built_in">max</span>(tL, height[l]);</span><br><span class="line">	        rL = <span class="built_in">max</span>(rL, height[r]);</span><br><span class="line"></span><br><span class="line">	        <span class="comment">// 谁的最大高度更小，就看谁那边能不能接水</span></span><br><span class="line">	        <span class="keyword">if</span> (tL &lt; rL) &#123;</span><br><span class="line">	            ans += tL - height[l];  <span class="comment">// 左边接水 = 左最大高度 - 当前高度</span></span><br><span class="line">	            l++;                    <span class="comment">// 移动左指针</span></span><br><span class="line">	        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	            ans += rL - height[r];  <span class="comment">// 右边接水 = 右最大高度 - 当前高度</span></span><br><span class="line">	            r--;                    <span class="comment">// 移动右指针</span></span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	</span><br><span class="line">	    <span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li>如果最后进位 <code>carry &gt; 0</code>，则加上一个新节点；</li>
+<li>返回结果链表头 <code>head</code>。</li>
+</ol>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode *head = <span class="literal">nullptr</span>, *cur = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="type">int</span> carry = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历 l1 和 l2 的每一位</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> sum, val; l1 != <span class="literal">nullptr</span> || l2 != <span class="literal">nullptr</span>;</span><br><span class="line">             l1 = (l1 == <span class="literal">nullptr</span> ? <span class="literal">nullptr</span> : l1-&gt;next),</span><br><span class="line">             l2 = (l2 == <span class="literal">nullptr</span> ? <span class="literal">nullptr</span> : l2-&gt;next)) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当前位和 = l1值 + l2值 + 上一位进位</span></span><br><span class="line">            sum = (l1 ? l1-&gt;val : <span class="number">0</span>) + (l2 ? l2-&gt;val : <span class="number">0</span>) + carry;</span><br><span class="line">            val = sum % <span class="number">10</span>;     <span class="comment">// 当前位数字</span></span><br><span class="line">            carry = sum / <span class="number">10</span>;   <span class="comment">// 进位</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 创建节点并接入链表</span></span><br><span class="line">            <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                head = <span class="keyword">new</span> <span class="built_in">ListNode</span>(val);</span><br><span class="line">                cur = head;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur-&gt;next = <span class="keyword">new</span> <span class="built_in">ListNode</span>(val);</span><br><span class="line">                cur = cur-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果还有进位，最后加一位</span></span><br><span class="line">        <span class="keyword">if</span> (carry == <span class="number">1</span>) &#123;</span><br><span class="line">            cur-&gt;next = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="示例分析："><a href="#示例分析：" class="headerlink" title="示例分析："></a>示例分析：</h3><p>输入：<code>height = [0,1,0,2,1,0,1,3,2,1,2,1]</code><br>输出：<code>6</code></p>
-<p>解释：</p>
-<p>接水的区域如下图所示（柱状图视角）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    █ </span><br><span class="line">█   █ █</span><br><span class="line">█ █ ███</span><br></pre></td></tr></table></figure>
-
-<p>接水量：<code>1 + 1 + 2 + 1 + 1 = 6</code></p>
+<hr>
+<h2 id="边界处理细节"><a href="#边界处理细节" class="headerlink" title="边界处理细节"></a>边界处理细节</h2><table>
+<thead>
+<tr>
+<th>情况</th>
+<th>是否处理？</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>l1</code> 或 <code>l2</code> 为 nullptr</td>
+<td>✅</td>
+<td>使用三元运算符 <code>(l1 ? l1-&gt;val : 0)</code> 处理</td>
+</tr>
+<tr>
+<td>两链表长度不同</td>
+<td>✅</td>
+<td>遍历到最长链表结束即可</td>
+</tr>
+<tr>
+<td>最后一位有进位</td>
+<td>✅</td>
+<td><code>if (carry == 1)</code> 添加尾部节点</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><table>
+<thead>
+<tr>
+<th>l1</th>
+<th>l2</th>
+<th>输出结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[2,4,3]</code></td>
+<td><code>[5,6,4]</code></td>
+<td><code>[7,0,8]</code></td>
+<td>342 + 465 &#x3D; 807</td>
+</tr>
+<tr>
+<td><code>[0]</code></td>
+<td><code>[0]</code></td>
+<td><code>[0]</code></td>
+<td>简单零值</td>
+</tr>
+<tr>
+<td><code>[9,9,9]</code></td>
+<td><code>[1]</code></td>
+<td><code>[0,0,0,1]</code></td>
+<td>999 + 1 &#x3D; 1000</td>
+</tr>
+</tbody></table>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -238,7 +303,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95%E4%B8%80%EF%BC%9A%E7%9B%B8%E5%90%91%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-number">1.</span> <span class="toc-text">解法一：相向双指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%80%9D%E8%B7%AF%EF%BC%9A%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95-%E5%B1%80%E9%83%A8%E6%9C%80%E5%80%BC"><span class="toc-number">1.1.</span> <span class="toc-text">题目思路：双指针法 + 局部最值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">算法核心思想：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">定义：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">示例分析：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">示例：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95%E4%B8%80%EF%BC%9A%E6%A8%A1%E6%8B%9F"><span class="toc-number">2.</span> <span class="toc-text">解法一：模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.</span> <span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B9%E7%95%8C%E5%A4%84%E7%90%86%E7%BB%86%E8%8A%82"><span class="toc-number">5.</span> <span class="toc-text">边界处理细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">6.</span> <span class="toc-text">示例</span></a></li></ol>
                 </div>
             </div>
             
